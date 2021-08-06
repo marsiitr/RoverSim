@@ -51,17 +51,17 @@ The project aims to introduce the Path-Planning phase to a wireless rover to mak
 
 ## References
 
-<http://wiki.ros.org/>
+* ROS wiki: <http://wiki.ros.org/>
 
-<https://www.youtube.com/watch?v=ZmQIkBws4LA>
+* Path planning: <https://www.youtube.com/watch?v=ZmQIkBws4LA>
 
-<https://www.youtube.com/watch?v=X30sEgIws0g&t=1632s&ab_channel=CyrillStachniss>
+* EKF SLAM: <https://www.youtube.com/watch?v=X30sEgIws0g&t=1632s&ab_channel=CyrillStachniss>
 
-<https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm&ab_channel=ClausBrenner>
+* SLAM basics: <https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm&ab_channel=ClausBrenner>
 
-* Chapter 10 in Probabilistic Robotics by Dieter Fox, Sebastian Thrun, and Wolfram Burgard
+* [Chapter 10 in Probabilistic Robotics by Dieter Fox, Sebastian Thrun, and Wolfram Burgard](https://books.google.co.in/books/about/Probabilistic_Robotics.html?id=2Zn6AQAAQBAJ&source=kp_book_description&redir_esc=y)
 
-<https://dspace.mit.edu/bitstream/handle/1721.1/119149/16-412j-spring-2005/contents/projects/1aslam_blas_repo.pdf>
+* SLAM for dummies: <https://dspace.mit.edu/bitstream/handle/1721.1/119149/16-412j-spring-2005/contents/projects/1aslam_blas_repo.pdf>
 
 ## Readme files for elaborative explanation of working
 
