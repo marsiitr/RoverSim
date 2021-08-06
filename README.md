@@ -24,7 +24,7 @@ The project aims to introduce the Path-Planning phase to a wireless rover to mak
 
 ## Limitations
 
-* While navigating to its destination, the robot tends to go too close to an obstacle and get stuck in a loop that makes it rotate constantly.
+* While navigating to its destination, the robot tends to go too close to an obstacle and get stuck in a loop that makes it rotate constantly.<br><br>
 **EKF Slam has some limitations as listed below:**
 * For larger inputs, the application crashes because the time complexity of the algorithm is O(n^2)
 * Featured(point) landmarks can only be detected
@@ -48,3 +48,22 @@ The project aims to introduce the Path-Planning phase to a wireless rover to mak
 
 1. [Pradnesh Pramod Chavan](https://github.com/theobscuredev)
 2. Shubham Goyal
+
+## References
+
+<http://wiki.ros.org/>
+
+<https://www.youtube.com/watch?v=ZmQIkBws4LA>
+
+<https://www.youtube.com/watch?v=X30sEgIws0g&t=1632s&ab_channel=CyrillStachniss>
+
+<https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm&ab_channel=ClausBrenner>
+
+* Chapter 10 in Probabilistic Robotics by Dieter Fox, Sebastian Thrun, and Wolfram Burgard
+
+<https://dspace.mit.edu/bitstream/handle/1721.1/119149/16-412j-spring-2005/contents/projects/1aslam_blas_repo.pdf>
+
+## Readme files for elaborative explanation of working
+
+* ![Dijkstra_Path_Planning](https://github.com/brahatesh/RoverSim-1/blob/main/src/Dijkstra_Path_Planning/README.md)
+* ![EKF_SLAM](https://github.com/brahatesh/RoverSim-1/blob/main/src/EKF%20SLAM/README.md)
