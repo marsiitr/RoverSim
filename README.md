@@ -5,14 +5,18 @@ Open Projects 2021
 
 The project aims to introduce the Path-Planning phase to a wireless rover to make it capable to navigate autonomously in an environment with the help of path planning algorithms (Dijkstra and SLAM) parsed by a python script. It aims to reach the destination through the shortest path and shortest time. This was done using ROS navigation stack by performing a simulation of a rover model in Gazebo environment, by running ROS (Melodic Morenia) in Ubuntu 18.04. The robot used in this project is Turtlebot 3.
 
-![gazebo_sim](https://github.com/brahatesh/RoverSim-1/blob/main/Images%20and%20Videos/Gifs/gazebo_sim.gif "Simulation in Gazebo")
+![gazebo_sim](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/gazebo_sim.gif "Simulation in Gazebo")
 
-![rviz_sim](https://github.com/brahatesh/RoverSim-1/blob/main/Images%20and%20Videos/Gifs/rviz_sim.gif "Simulation in RViz")
+![rviz_sim](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/rviz_sim.gif "Simulation in RViz")
 
 
 ## Motivation
 
 <p>Watching a robot move on its own without any human input is always fascinating. So, our team of 5 freshers decided to take on the challenge to learn how a robot maps the environment, find its position in the map of the environment and move from one position to another on its own.<br><br>The future will be fully automated with the help of robots and for that automated navigation will be extremely important. So making a small robot move automatically is the first step.</p>
+
+## Workflow
+
+![Workflow](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Images/Workflow.jpg)
 
 ## Applications
 
@@ -51,19 +55,19 @@ The project aims to introduce the Path-Planning phase to a wireless rover to mak
 
 ## References
 
-* ROS wiki: <http://wiki.ros.org/>
+* [ROS wiki](http://wiki.ros.org/)
 
-* Path planning: <https://www.youtube.com/watch?v=ZmQIkBws4LA>
+* [Path planning](https://www.youtube.com/watch?v=ZmQIkBws4LA)
 
-* EKF SLAM: <https://www.youtube.com/watch?v=X30sEgIws0g&t=1632s&ab_channel=CyrillStachniss>
+* [EKF SLAM](https://www.youtube.com/watch?v=X30sEgIws0g&t=1632s&ab_channel=CyrillStachniss)
 
-* SLAM basics: <https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm&ab_channel=ClausBrenner>
+* [SLAM basics](https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm&ab_channel=ClausBrenner)
 
 * [Chapter 10 in Probabilistic Robotics by Dieter Fox, Sebastian Thrun, and Wolfram Burgard](https://books.google.co.in/books/about/Probabilistic_Robotics.html?id=2Zn6AQAAQBAJ&source=kp_book_description&redir_esc=y)
 
-* SLAM for dummies: <https://dspace.mit.edu/bitstream/handle/1721.1/119149/16-412j-spring-2005/contents/projects/1aslam_blas_repo.pdf>
+* [SLAM for dummies](https://dspace.mit.edu/bitstream/handle/1721.1/119149/16-412j-spring-2005/contents/projects/1aslam_blas_repo.pdf)
 
 ## Readme files for elaborative explanation of working
 
-* ![Dijkstra_Path_Planning](https://github.com/brahatesh/RoverSim-1/blob/main/src/Dijkstra_Path_Planning/README.md)
-* ![EKF_SLAM](https://github.com/brahatesh/RoverSim-1/blob/main/src/EKF%20SLAM/README.md)
+* [Dijkstra_Path_Planning](https://github.com/brahatesh/RoverSim/blob/main/src/Dijkstra_Path_Planning/README.md)
+* [EKF_SLAM](https://github.com/brahatesh/RoverSim/blob/main/src/EKF%20SLAM/README.md)

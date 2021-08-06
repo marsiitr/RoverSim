@@ -23,11 +23,11 @@ Run the launch xml file
 
 ## THE CODE EXPLAINED
 
-### THE ALGORITHM - (![File](https://github.com/brahatesh/RoverSim-1/blob/main/src/Dijkstra_Path_Planning/src/dijkstra_pp/scripts/path_planning_dijkstra.py))
+### THE ALGORITHM - ([File](https://github.com/brahatesh/RoverSim/blob/main/src/Dijkstra_Path_Planning/src/dijkstra_pp/scripts/path_planning_dijkstra.py))
 
 Dijkstra's algorithm is an algorithm that finds the path between 2 nodes with the minimum cost. Cost in this case can be treated as the distance between 2 nodes. 
 
-![Flowchart](https://raw.githubusercontent.com/brahatesh/RoverSim-1/main/Images%20and%20Videos/Images/djikstra_flowchart.jpg)
+![Flowchart](https://raw.githubusercontent.com/brahatesh/RoverSim/main/Images%20and%20Videos/Images/djikstra_flowchart.jpg)
 
 
 Some terminologies used:
@@ -50,7 +50,7 @@ Some terminologies used:
 7. Go to step 2 if open_list is not empty.
 8. Build a path list from end to start by tracing back from target node to start node using each node's parent node. Then reverse this path list to get the path.
 
-### THE PLUGIN - (![File](https://github.com/brahatesh/RoverSim-1/blob/main/src/Dijkstra_Path_Planning/src/pp_plugin/src/pp_plugin.cpp))
+### THE PLUGIN - ([File](https://github.com/brahatesh/RoverSim/blob/main/src/Dijkstra_Path_Planning/src/pp_plugin/src/pp_plugin.cpp))
 
 This plugin makes the call to the path planning server and publishes the path in the format of nav_msgs::Path in the plan topic. It also gets the 2D costmap and converts it to 1D array so that it can be passed on to the algorithm. Other things done by the plugin include converting regular co-ordinates to an equivalent index on the 1D costmap.
 
