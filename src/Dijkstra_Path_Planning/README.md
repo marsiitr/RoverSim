@@ -39,7 +39,40 @@ Some terminologies used:
 * **parent node:** Lowest costing node that discovers the given node
 
 1. Make the g_cost of starting node as 0 and add it to open_list.
-2. Arrange open_list according to g_cost of nodes and pop the lowest costing node. Call this 
-3. 
+2. Arrange open_list according to g_cost of nodes and pop the lowest costing node. Call this current node. 
+3. Add current node to closed_list.
+4. If current node is goal node, go to step 8.
+5. Get neighbours of current node.
+6. Analyze each neighbour of current node as follows:
+    * If neighbour is in closed_list, skip and continue to the next neighbour.
+    * If neighbour is in open_list and g_cost of current node is less than g_cost of parent of neighbour, set current node as parent node and update g_cost of neighbour.
+    * If neighbour is not in open_list or closed_list, add neighbour to open_list with current node as parent.
+7. Go to step 2 if open_list is not empty.
+8. Build a path list from end to start by tracing back from target node to start node using each node's parent node. Then reverse this path list to get the path.
+
+### THE PLUGIN - (![File](https://github.com/brahatesh/RoverSim-1/blob/main/src/Dijkstra_Path_Planning/src/pp_plugin/src/pp_plugin.cpp))
+
+This plugin makes the call to the path planning server and publishes the path in the format of nav_msgs::Path in the plan topic. It also gets the 2D costmap and converts it to 1D array so that it can be passed on to the algorithm. Other things done by the plugin include converting regular co-ordinates to an equivalent index on the 1D costmap.
 
 ## DEPENDENCIES
+
+This simulation depends on the following ROS melodic packages:
+* rospy
+* message_runtime
+* roscpp
+* std_msgs
+* base_local_planner
+* costmap_2d
+* geometry_msgs
+* nav_core
+* nav_msgs
+* pluginlib
+* tf2
+* tf2_geometry_msgs
+* tf2_ros
+* amcl
+* gazebo
+* move_base
+* rviz
+* map_server
+* robot_state_publisher
