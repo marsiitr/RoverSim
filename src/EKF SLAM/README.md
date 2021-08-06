@@ -26,11 +26,17 @@ As any EKF algorithm, EKF SLAM makes a Gaussian noise assumption for the robot m
 The amount of uncertainty in the posterior must be relatively small, since otherwise the linearization in EKFs tend to introduce intolerable errors.
 
 ## Simulation colour code:
-//////colour coordinates in the map//////
-Black stars: landmarks{givrn landmarks}
+![image](https://user-images.githubusercontent.com/77194049/128481462-208536b9-9b33-4853-a389-2b5067b3c65a.png)
+
+
+Black stars: landmarks{given landmarks}
+
 Black line: dead reckoning{prediction}
+
 Cyan line: ground truth{true position}
+
 Red line: EKF SLAM position estimation{esti,mation}
+
 Magenta crosses: estimates of landmark positions
 
 ## Variables Used
