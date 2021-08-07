@@ -2,14 +2,14 @@
 ## Open Projects 2021
 
 <p align="center">
-
-![gazebo_sim](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/gazebo_sim.gif "Simulation in Gazebo")
-<i>Simulation in Gazebo</i></p>
+<img src="https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/gazebo_sim.gif"/>
+<i>Simulation in Gazebo</i>
+</p>
 
 <p align="center">
-
-![rviz_sim](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/rviz_sim.gif "Simulation in RViz")
-<i>Simulation in RViz</i></p>
+<img src="https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Gifs/rviz_sim.gif"/>
+<i>Simulation in RViz</i>
+</p>
 
 
 ## Abstract
@@ -23,8 +23,8 @@
 
 ## Workflow
 <p align="center">
-
-![Workflow](https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Images/Workflow.jpg)</p>
+<img src="https://github.com/brahatesh/RoverSim/blob/main/Images%20and%20Videos/Images/Workflow.jpg"/>
+</p>
 
 ## Software aspects
 

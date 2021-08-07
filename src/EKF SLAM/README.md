@@ -39,7 +39,8 @@ The amount of uncertainty in the posterior must be relatively small, since other
 ## Simulation colour code:
 <p align="center">
 
-![image](https://user-images.githubusercontent.com/77194049/128481462-208536b9-9b33-4853-a389-2b5067b3c65a.png)</p>
+<img src="https://user-images.githubusercontent.com/77194049/128481462-208536b9-9b33-4853-a389-2b5067b3c65a.png"/>
+</p>
 
 
 <p align="justify">
@@ -95,7 +96,8 @@ def motion_model(x, u):
 #### Jacobian of the motion model matrix:
 <p align="center">
 
-![image](https://user-images.githubusercontent.com/77194049/128479963-cd1866b6-0803-468f-a6c8-b2e0e5b29a46.png)</p>
+<img src="https://user-images.githubusercontent.com/77194049/128479963-cd1866b6-0803-468f-a6c8-b2e0e5b29a46.png"/>
+</p>
 
 <p align="justify">
 

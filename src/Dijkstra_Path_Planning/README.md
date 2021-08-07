@@ -28,8 +28,8 @@ Run the launch xml file
 <p align="justify">Dijkstra's algorithm is an algorithm that finds the path between 2 nodes with the minimum cost. Cost in this case can be treated as the distance between 2 nodes.</p> 
 
 <p align="center">
-
-![Flowchart](https://raw.githubusercontent.com/brahatesh/RoverSim/main/Images%20and%20Videos/Images/djikstra_flowchart.jpg)</p>
+<img src="https://raw.githubusercontent.com/brahatesh/RoverSim/main/Images%20and%20Videos/Images/djikstra_flowchart.jpg"/>
+</p>
 
 
 <p align="justify">
