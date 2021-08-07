@@ -1,4 +1,6 @@
 # EKF SLAM known correspondences(µt−1, Σt−1, ut, zt)
+<p align="justify">
+
 SLAM address one of the most fundamental problems in robotics,
 the simultaneous localization and mapping problem. 
 This problem is commonly abbreviated as SLAM, and is also known as Concurrent Mapping and Localization, or CML.
@@ -7,37 +9,46 @@ Instead, all it is given are measurements z1:t and controls u1:t.
 The term “simultaneous localization and mapping” describes the resulting problem.
 In SLAM, the robot acquires a map of its environment while simultaneously localizing itself relative to this map.
 From a probabilistic perspective, there are two main forms of the SLAM problem, which are both of equal practical importance.
-One is known as the online SLAM problem and another is known as full slam problem.
+One is known as the online SLAM problem and another is known as full slam problem.</p>
+
 ## Online SLAM problem:
+<p align="justify">
+
 It involves estimating the posterior over the momentary pose along with the map:
 p(xt;m j z1:t; u1:t)
 This particular code solves the online SLAM problem.
 Here xt is the pose at time t, m is the map, and z1:t and u1:t are the measurements and controls, respectively.
 This problem is called the online SLAM problem since it only involves the estimation of variables that persist at time t.
-Many algorithms for the online SLAM problem are incremental, they discard past measurements and controls once they have been processed.
+Many algorithms for the online SLAM problem are incremental, they discard past measurements and controls once they have been processed.</p>
+
 ## General assumptions:
 ### Feature-based maps:
+<p align="justify">
+
 Maps, in the EKF, are composed of point landmarks.
 For computational reasons, the number of point landmarks is usually small (e.g., smaller than 1,000).
 Further, the EKF approach tends to work well the less ambiguous the landmarks are(in the code the landmarks are given, hence ideally the error associated is 0).
-For this reason, EKF SLAM requires significant engineering of feature detectors, sometimes using artificial beacons or landmarks as features.
+For this reason, EKF SLAM requires significant engineering of feature detectors, sometimes using artificial beacons or landmarks as features.</p>
+
 ### Gaussian noise:
+<p align="justify">
+
 As any EKF algorithm, EKF SLAM makes a Gaussian noise assumption for the robot motion and the perception.
-The amount of uncertainty in the posterior must be relatively small, since otherwise the linearization in EKFs tend to introduce intolerable errors.
+The amount of uncertainty in the posterior must be relatively small, since otherwise the linearization in EKFs tend to introduce intolerable errors.</p>
 
 ## Simulation colour code:
-![image](https://user-images.githubusercontent.com/77194049/128481462-208536b9-9b33-4853-a389-2b5067b3c65a.png)
+<p align="center">
+
+![image](https://user-images.githubusercontent.com/77194049/128481462-208536b9-9b33-4853-a389-2b5067b3c65a.png)</p>
 
 
-Black stars: landmarks{given landmarks}
+<p align="justify">
 
-Black line: dead reckoning{prediction}
-
-Cyan line: ground truth{true position}
-
-Red line: EKF SLAM position estimation{esti,mation}
-
-Magenta crosses: estimates of landmark positions
+* Black stars: landmarks{given landmarks}
+* Black line: dead reckoning{prediction}
+* Cyan line: ground truth{true position}
+* Red line: EKF SLAM position estimation{esti,mation}
+* Magenta crosses: estimates of landmark positions </p>
 
 ## Variables Used
 ```
@@ -64,7 +75,9 @@ def calc_input():
 ## Mathematical model:
 
 ### Motion model:
-Since the bot used is TURTLEBOT-3 which is a differential drive bot, the motion model is framed as a differential drive model.
+<p align="justify">
+
+Since the bot used is TURTLEBOT-3 which is a differential drive bot, the motion model is framed as a differential drive model.</p>
 ```
 def motion_model(x, u):
     F = np.array([[1.0, 0, 0],
@@ -80,13 +93,18 @@ def motion_model(x, u):
 ```
 
 #### Jacobian of the motion model matrix:
-![image](https://user-images.githubusercontent.com/77194049/128479963-cd1866b6-0803-468f-a6c8-b2e0e5b29a46.png)
+<p align="center">
+
+![image](https://user-images.githubusercontent.com/77194049/128479963-cd1866b6-0803-468f-a6c8-b2e0e5b29a46.png)</p>
+
+<p align="justify">
 
 The robot R moves according to a control signal u and a perturbation n and updates its state,
 R ← f(R, u, n) 
 The control signal is often the data from the sensors. 
 It can also be the control data sent by the computer to the robot’s wheels.
-And it can also be void, in case the motion model does not take any control input.
+And it can also be void, in case the motion model does not take any control input.</p>
+
 ```
 def jacob_motion(x, u):
     #upscale matrix__Fx=(I[3x3],0[3x2n])
@@ -103,9 +121,11 @@ def jacob_motion(x, u):
 ```
 
 ### Observation model
+<p align="center">
+
 The robot R observes a landmark Li that was already mapped by means of one of its sensors S.
-It obtains a measurement yi,
-yi = h(R, S,Li)
+It obtains a measurement yi, yi = h(R, S,Li)</p>
+
 ```
 def observation(True_x, xd, u, map_of_landmarks):
     #updated pose value (without any error introduced)
@@ -157,8 +177,11 @@ def jacob_h(q, delta, x, i):
     return H
 ```
 ## Innovation matrix
+<p align="center"> 
+
 Using the estimate of the current position it is possible to estimate where the landmark should be.
-There is usually some difference, this is called the innovation.
+There is usually some difference, this is called the innovation.</p>
+
 ```
 def calc_innovation(land_marks, X_estimation, X_uncertainty, z, LMid):
     delta = land_marks - X_estimation[0:2]
@@ -217,12 +240,17 @@ def search_correspond_landmark_id(Extended_state_matrix, Extended_covariance_mat
     return min_id
 ```
 ## Normalisation:
-Angle normalisation to make sure the angle is in the interval [-pi,pi]
+<p align="center"> 
+
+Angle normalisation to make sure the angle is in the interval [-pi,pi]</p>
+
 ```
 def angle_normalise(theta):
     return (theta + math.pi) % (2 * math.pi) - math.pi
 ```
 ## EXTENDED KALMAN FILTER:
+<p align="center">
+
 In EKF-SLAM, the map is a large vector stacking sensors and landmarks states, and
 it is modeled by a Gaussian variable. This map, usually called the stochastic map, is
 maintained by the EKF through the processes of prediction (the sensors move) and correction (the sensors observe the landmarks in the environment that had been previously
@@ -232,7 +260,8 @@ step of landmark initialization, where newly discovered landmarks are added to t
 Landmark initialization is performed by inverting the observation function and using it
 and its Jacobians to compute, from the sensor pose and the measurements, the observed
 landmark state and its necessary co- and cross-variances with the rest of the map. These
-relations are then appended to the state vector and the covariances matrix
+relations are then appended to the state vector and the covariances matrix</p>
+
 ```
 def ekf_slam(X_estimation, X_uncertainty, u, z):
     #////z current or new measurement read by the sensors//////
