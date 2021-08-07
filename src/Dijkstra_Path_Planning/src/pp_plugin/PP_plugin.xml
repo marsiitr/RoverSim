@@ -1,0 +1,5 @@
+<library path = "lib/libpp_plugin">
+    <class type="global_planner::GlobalPlanner" base_class_type="nav_core::BaseGlobalPlanner">
+        <description>Plugin for dijkstra_pp</description>
+    </class>
+</library>
